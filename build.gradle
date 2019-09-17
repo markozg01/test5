@@ -1,0 +1,32 @@
+plugins {
+	//id 'org.springframework.boot' version '2.1.8.RELEASE'
+	id 'org.springframework.boot' version '1.5.19.RELEASE'
+	//id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'groovy'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.codehaus.groovy:groovy'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'com.github.tomakehurst:wiremock-standalone:2.1.12'
+	implementation 'com.github.groovy-wslite:groovy-wslite:2.0.0-SNAPSHOT'
+
+
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.spockframework:spock-core:1.2-groovy-2.4'
+	testImplementation 'org.spockframework:spock-spring:1.2-groovy-2.4'
+	testImplementation 'cglib:cglib-nodep:3.2.10'
+	testImplementation 'org.objenesis:objenesis:2.6'
+	testImplementation('com.github.tomakehurst:wiremock:2.1.12')
+}
